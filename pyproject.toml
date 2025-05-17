@@ -1,0 +1,21 @@
+[project]
+name = "custom-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "manizum", email = "manizum1@hotmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "dotenv>=0.9.9",
+    "openai-agents>=0.0.15",
+]
+
+[project.scripts]
+custom-agent = "custom_agent:main"
+RunAgent = "custom_agent.cust_agent:run_financial_agent"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
